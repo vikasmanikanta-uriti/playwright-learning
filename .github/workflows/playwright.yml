@@ -6,7 +6,10 @@ on:
     - master
     - feature/*
   pull_request:
-    branches: [ main, master ]
+    branches: 
+      - main
+    - master
+    - feature/*
 jobs:
   test:
     timeout-minutes: 60
