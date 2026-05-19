@@ -4,6 +4,7 @@ import { SecurePage } from '../pages/SecurePage';
 import { LoginPage } from '../pages/LoginPage';
 
 type MyFixtures = {
+  loginPage: LoginPage;
   securePage: SecurePage;
 };
 
