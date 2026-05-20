@@ -1,3 +1,5 @@
+// API GET automation practice
+
 //validate response body
 import { test, expect } from '@playwright/test';
 

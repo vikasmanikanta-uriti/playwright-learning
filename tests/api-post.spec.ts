@@ -16,7 +16,6 @@ test('POST API Test', async ({ request }) => {
   const responseBody = await response.json();
 
   console.log(responseBody);
-
   expect(response.status()).toBe(201);
 
   expect(responseBody.title)
