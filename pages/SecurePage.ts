@@ -1,5 +1,5 @@
 import { Page, Locator, expect } from '@playwright/test';
-
+// verify secure
 export class SecurePage {
   readonly page: Page;
   readonly successMessage: Locator;

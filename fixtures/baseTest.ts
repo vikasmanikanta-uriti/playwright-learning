@@ -1,7 +1,8 @@
-//authenticated fixture - login
+//authenticated fixture - login test
+//authenticated fixture - login test modified on 20 may 2026
 import { test as base } from '@playwright/test';
-import { SecurePage } from '../pages/SecurePage';
 import { LoginPage } from '../pages/LoginPage';
+import { SecurePage } from '../pages/SecurePage';
 
 type MyFixtures = {
   loginPage: LoginPage;
@@ -9,21 +10,18 @@ type MyFixtures = {
 };
 
 export const test = base.extend<MyFixtures>({
-  securePage: async ({ page }, use) => {
+  loginPage: async ({ page }, use) => {
     const loginPage = new LoginPage(page);
+    await use(loginPage);
+  },
 
-    await loginPage.open();
-
-    await loginPage.login(
-      'tomsmith',
-      'SuperSecretPassword!'
-    );
-
+  securePage: async ({ page }, use) => {
     const securePage = new SecurePage(page);
-
     await use(securePage);
   },
 });
+
+export { expect } from '@playwright/test';
 
 
 
